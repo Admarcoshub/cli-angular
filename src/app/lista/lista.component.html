@@ -5,10 +5,10 @@
 	</div>
 
 	<div class="panel-body">
-	<app-formulario></app-formulario>
-		<div *ngFor="let item of lista">
+	<app-formulario (onProductoAdd)="agregar($event)"></app-formulario>
+	<div *ngFor="let item of lista">
 		<app-item [producto]="item"></app-item>
-		</div>	
+	</div>	
 	</div>	
 </div>
 

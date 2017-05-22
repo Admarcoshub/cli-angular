@@ -1,5 +1,5 @@
-import { Producto } from './producto';
 import { Component, OnInit } from '@angular/core';
+import { Producto } from './producto';
 
 @Component({
   selector: 'app-lista',
@@ -13,6 +13,10 @@ export class ListaComponent implements OnInit {
   		this.lista.push(new Producto ("fideos"));
   		this.lista.push(new Producto ("leche"));
   		this.lista.push(new Producto ("arroz"));
+  }
+
+  agregar(data:Producto) {
+    this.lista.unshift(data);
   }
 
   ngOnInit() {
